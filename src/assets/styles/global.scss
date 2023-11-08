@@ -9,6 +9,7 @@
 
 html {
   font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
 }
 
 ul {
@@ -38,7 +39,23 @@ a {
   }
 }
 
+img {
+  width: 100%;
+}
+
 .main-container {
   max-width: 1300px;
   margin-inline: auto;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 1.8rem;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid black;
+}
+
+body {
+  height: 300vh;
 }

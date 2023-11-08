@@ -2,7 +2,7 @@
   <nav class="nav main-container">
     <a href="/" class="logo">
       <img
-        src="../../assets/images/main-logo.png"
+        src="../../assets/images/menu-logo.png"
         alt="Logo MC Kosmetologia profesjonalna" />
     </a>
     <div class="burger" @click="toggleMobileMenu">
@@ -25,6 +25,9 @@
       </li>
       <li>
         <router-link to="/kontakt">Kontakt</router-link>
+      </li>
+      <li>
+        <router-link to="/zapisz-sie">Zapisz się</router-link>
       </li>
     </ul>
   </nav>
@@ -52,6 +55,8 @@ export default {
   align-items: center;
   margin-bottom: 32px;
   padding: 16px 32px 0;
+  background-color: white;
+  z-index: 1;
 }
 
 .burger {
@@ -97,7 +102,7 @@ export default {
       padding: 20px;
       margin-top: 12px;
       cursor: pointer;
-      font-size: 2rem;
+      font-size: 3.2rem;
       line-height: 16px;
     }
 
@@ -106,7 +111,7 @@ export default {
       padding: 4px 8px;
       transition: all 0.3s ease;
       display: block;
-      font-size: 1.4rem;
+      font-size: 2.4rem;
       width: max-content;
 
       &.active {
@@ -128,6 +133,11 @@ export default {
 }
 
 @media screen and (min-width: 767px) {
+  .nav {
+    position: sticky;
+    top: 0;
+    margin-bottom: 0;
+  }
   .burger {
     display: none;
   }
@@ -147,11 +157,31 @@ export default {
       }
 
       a {
-        font-size: 1rem;
+        position: relative;
+        /* border-bottom: 1px solid transparent; */
+        font-size: 1.6rem;
+
+        &::after {
+          display: block;
+          content: "";
+          /* width: 100%; */
+          width: 0;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          transform: translateY(5px);
+          left: 0;
+          background-color: black;
+          transition: all 0.3s ease;
+        }
         &.active {
-          border-bottom: 1px solid black;
+          /* border-color: black; */
           padding-left: 8px;
           font-weight: 400;
+
+          &::after {
+            width: 100%;
+          }
 
           &:hover {
             transform: none;

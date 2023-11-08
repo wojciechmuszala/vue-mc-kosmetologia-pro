@@ -4,6 +4,7 @@ import AboutPage from "../pages/AboutPage.vue";
 import OfferPage from "../pages/OfferPage.vue";
 import PriceListPage from "../pages/PriceListPage.vue";
 import ContactPage from "../pages/ContactPage.vue";
+import SignUpPage from "../pages/SignUpPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: "/oferta", component: OfferPage },
     { path: "/cennik", component: PriceListPage },
     { path: "/kontakt", component: ContactPage },
+    { path: "/zapisz-sie", component: SignUpPage },
   ],
   linkActiveClass: "active",
 });
