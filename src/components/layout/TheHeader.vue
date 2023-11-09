@@ -1,36 +1,38 @@
 <template>
-  <nav class="nav main-container">
-    <a href="/" class="logo">
-      <img
-        src="../../assets/images/menu-logo.png"
-        alt="Logo MC Kosmetologia profesjonalna" />
-    </a>
-    <div class="burger" @click="toggleMobileMenu">
-      <div class="wrapper">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header class="container">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <img
+          src="../../assets/images/mini-logo.png"
+          alt="Logo MC Kosmetologia profesjonalna" />
+      </a>
+      <div class="burger" @click="toggleMobileMenu">
+        <div class="wrapper">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
-    <ul :class="['menu', { open: menuMobileIsOpen }]">
-      <li class="close" @click="toggleMobileMenu">×</li>
-      <li>
-        <router-link to="/o-nas">O nas</router-link>
-      </li>
-      <li>
-        <router-link to="/oferta">Oferta</router-link>
-      </li>
-      <li>
-        <router-link to="/cennik">Cennik</router-link>
-      </li>
-      <li>
-        <router-link to="/kontakt">Kontakt</router-link>
-      </li>
-      <li>
-        <router-link to="/zapisz-sie">Zapisz się</router-link>
-      </li>
-    </ul>
-  </nav>
+      <ul :class="['menu', { open: menuMobileIsOpen }]">
+        <li class="close" @click="toggleMobileMenu">×</li>
+        <li>
+          <router-link to="/o-nas">O nas</router-link>
+        </li>
+        <li>
+          <router-link to="/oferta">Oferta</router-link>
+        </li>
+        <li>
+          <router-link to="/cennik">Cennik</router-link>
+        </li>
+        <li>
+          <router-link to="/kontakt">Kontakt</router-link>
+        </li>
+        <li class="sign-up">
+          <router-link to="/zapisz-sie">Zapisz się</router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -49,14 +51,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+      background-color: rgba($color: white, $alpha: 0.9);
+      z-index: 1;
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
   padding: 16px 32px 0;
-  background-color: white;
-  z-index: 1;
 }
 
 .burger {
@@ -133,10 +137,13 @@ export default {
 }
 
 @media screen and (min-width: 767px) {
-  .nav {
+  header {
     position: sticky;
     top: 0;
+  }
+  .nav {
     margin-bottom: 0;
+    padding-inline: 0;
   }
   .burger {
     display: none;
@@ -154,6 +161,10 @@ export default {
     li {
       &.close {
         display: none;
+      }
+
+      &.sign-up {
+        /* font-weight: 600; */
       }
 
       a {

@@ -12,6 +12,7 @@
   position: relative;
   max-height: 500px;
   overflow: hidden;
+  margin-top: 30px;
 
   .background-img {
     object-fit: cover;

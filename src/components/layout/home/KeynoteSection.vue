@@ -3,18 +3,7 @@
     <div class="text-hold">
       <h3 class="title">Myśl przewodnia</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet rem
-        officia repellendus sit minima porro earum tempora consectetur dolores
-        quae, voluptatibus assumenda mollitia facilis eos enim dolorum. Aperiam,
-        voluptas at. Quas debitis neque dignissimos sed esse doloremque
-        doloribus aperiam molestias! Nulla, sapiente officia? Quisquam quo animi
-        quas inventore et quidem provident doloribus perferendis! Nesciunt
-        adipisci, laboriosam, deserunt necessitatibus, unde quam quia cum alias
-        perferendis natus voluptatum? Vitae nam molestiae tenetur voluptate
-        ducimus exercitationem doloremque minus unde eveniet fugit, laudantium,
-        nisi dolore rem blanditiis omnis ratione deleniti id veniam ad
-        repellendus? Necessitatibus deleniti dolorem esse dolore architecto
-        quasi, labore omnis sit?
+        Troska o swoje ciało to inwestycja w zdrowie i dobre samopoczucie. Nasz gabinet kosmetologiczny dąży do tego, aby każdy klient nie tylko wyglądał, ale przede wszystkim czuł się wyjątkowo, doświadczając pełnej opieki, której organizm naprawdę zasługuje.
       </p>
     </div>
     <div class="img-hold">
@@ -31,6 +20,9 @@
   max-height: 500px;
 
   .text-hold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 50px;
     width: 50%;
 
@@ -47,6 +39,8 @@
   .img-hold {
     width: 50%;
     overflow: hidden;
+    padding: clamp(50px,8vw,100px);
+    
     img {
       object-fit: cover;
       object-position: 0% 50%;
