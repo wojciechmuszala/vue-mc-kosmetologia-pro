@@ -1,11 +1,11 @@
 <template>
   <header class="container">
     <nav class="nav">
-      <a href="/" class="logo">
-        <img
+      <router-link class="logo" to="/">
+         <img
           src="../../assets/images/mini-logo.png"
           alt="Logo MC Kosmetologia profesjonalna" />
-      </a>
+      </router-link>
       <div
         :class="['burger', { hiden: menuMobileIsOpen }]"
         @click="toggleMobileMenu">

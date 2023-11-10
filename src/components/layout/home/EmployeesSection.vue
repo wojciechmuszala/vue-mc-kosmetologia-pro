@@ -33,7 +33,8 @@
   </section>
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style lang="scss" scoped>
 .employees {

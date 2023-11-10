@@ -18,7 +18,6 @@
   position: relative;
   max-height: 500px;
   overflow: hidden;
-  margin-top: 10px;
 
   .background-img {
     object-fit: cover;
@@ -36,17 +35,6 @@
     width: 60vw;
     max-width: 200px;
     filter: invert(1);
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .logo {
-  margin-top: 30px;
-   
-
-    .logo-img {
-     
-    }
   }
 }
 </style>
