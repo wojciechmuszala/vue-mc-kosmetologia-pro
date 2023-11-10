@@ -38,16 +38,16 @@ a {
     text-decoration: underline;
   }
 }
+.container {
+  margin-inline: auto;
+  padding-inline: 10px;
+}
 
 img {
   width: 100%;
 }
 
-.container {
-  max-width: 1360px;
-  margin-inline: auto;
-  padding-inline: 60px;
-}
+
 
 .title {
   text-transform: uppercase;
@@ -55,4 +55,11 @@ img {
   font-size: 1.8rem;
   padding: 0 16px 16px;
   border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    max-width: 1360px;
+    padding-inline: 60px;
+  }
 }

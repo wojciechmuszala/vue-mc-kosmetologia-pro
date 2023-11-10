@@ -6,7 +6,9 @@
           src="../../assets/images/mini-logo.png"
           alt="Logo MC Kosmetologia profesjonalna" />
       </a>
-      <div class="burger" @click="toggleMobileMenu">
+      <div
+        :class="['burger', { hiden: menuMobileIsOpen }]"
+        @click="toggleMobileMenu">
         <div class="wrapper">
           <span></span>
           <span></span>
@@ -52,20 +54,36 @@ export default {
 
 <style lang="scss" scoped>
 header {
-      background-color: rgba($color: white, $alpha: 0.9);
-      z-index: 1;
+  background-color: rgba($color: white, $alpha: 0.9);
+  z-index: 1;
+  position: sticky;
+  top: 0;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
-  padding: 16px 32px 0;
+  padding: 8px 32px;
+}
+
+.logo {
+  display: block;
+  max-width: 40px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .burger {
-  cursor: pointer;
   padding: 10px;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &.hiden {
+    opacity: 0;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -82,20 +100,20 @@ header {
 }
 
 .menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 16px 0;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 240px;
-  display: none;
-  background-color: #f5f5f5;
   height: 100vh;
+  background-color: rgba($color: white, $alpha: 0.9);
   padding: 20px;
+  transition: all 0.4s linear;
 
   &.open {
-    display: flex;
+    right: 0;
   }
 
   li {
@@ -105,9 +123,9 @@ header {
       right: 0;
       padding: 20px;
       margin-top: 12px;
-      cursor: pointer;
       font-size: 3.2rem;
       line-height: 16px;
+      cursor: pointer;
     }
 
     a {
@@ -117,22 +135,28 @@ header {
       display: block;
       font-size: 2.4rem;
       width: max-content;
+      position: relative;
+      &::before{
+         display: block;
+          content: "•";
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          transform: translateY(-60%);
+          font-size: 40px;
+          opacity: 0;
+          transition: all 0.3s ease;
+      }
 
       &.active {
-        font-weight: 600;
-        padding-left: 20px;
+        padding-left: 30px;
         pointer-events: none;
+
+        &::before {
+         opacity: 1;
+        }
       }
     }
-  }
-}
-
-.logo {
-  display: block;
-  max-width: 60px;
-
-  img {
-    width: 100%;
   }
 }
 
@@ -140,6 +164,7 @@ header {
   header {
     position: sticky;
     top: 0;
+    background-color: rgba($color: white, $alpha: 0.9);
   }
   .nav {
     margin-bottom: 0;
@@ -148,9 +173,12 @@ header {
   .burger {
     display: none;
   }
+
+  .logo {
+    max-width: 60px;
+  }
   .menu {
     position: static;
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: auto;
@@ -163,34 +191,25 @@ header {
         display: none;
       }
 
-      &.sign-up {
-        /* font-weight: 600; */
-      }
-
       a {
         position: relative;
-        /* border-bottom: 1px solid transparent; */
         font-size: 1.6rem;
 
-        &::after {
-          display: block;
+        &::before {
           content: "";
-          /* width: 100%; */
           width: 0;
           height: 1px;
-          position: absolute;
           bottom: 0;
+          top: unset;
           transform: translateY(5px);
           left: 0;
           background-color: black;
-          transition: all 0.3s ease;
+          opacity: 1;
         }
         &.active {
-          /* border-color: black; */
           padding-left: 8px;
-          font-weight: 400;
 
-          &::after {
+          &::before {
             width: 100%;
           }
 
@@ -198,6 +217,7 @@ header {
             transform: none;
           }
         }
+
 
         &:hover {
           transform: translateY(-3px);

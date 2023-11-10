@@ -18,10 +18,12 @@
 
 <style lang="scss" scoped>
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #555;
   padding: 60px;
-  display: flex;
-  justify-content: space-between;
   margin-top: 100px;
 
   a {
@@ -51,6 +53,21 @@ footer {
 
     .img-hold {
       img {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  footer {
+    justify-content: space-between;
+    flex-direction: row;
+
+    .social-media {
+
+      .img-hold {
+        img {
+        }
       }
     }
   }
