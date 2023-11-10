@@ -28,14 +28,16 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease;
 }
-.fade-enter-to,
+/* .fade-enter-to,
 .fade-leave-from {
   opacity: 1;
-}
+} */
+
 main {
   margin-top: 10px;
 }

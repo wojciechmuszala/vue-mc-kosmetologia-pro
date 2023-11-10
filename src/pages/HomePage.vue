@@ -1,7 +1,9 @@
 <template>
-  <logo-section></logo-section>
-  <keynote-section></keynote-section>
-  <employees-section></employees-section>
+  <div>
+    <logo-section></logo-section>
+    <keynote-section></keynote-section>
+    <employees-section></employees-section>
+  </div>
 </template>
 
 <script>

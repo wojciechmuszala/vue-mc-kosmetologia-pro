@@ -1,8 +1,8 @@
 <template>
   <header class="container">
     <nav class="nav">
-      <router-link class="logo" to="/">
-         <img
+      <router-link class="logo" to="/strona-glowna">
+        <img
           src="../../assets/images/mini-logo.png"
           alt="Logo MC Kosmetologia profesjonalna" />
       </router-link>
@@ -136,16 +136,16 @@ header {
       font-size: 2.4rem;
       width: max-content;
       position: relative;
-      &::before{
-         display: block;
-          content: "•";
-          position: absolute;
-          top: 50%;
-          left: 5px;
-          transform: translateY(-60%);
-          font-size: 40px;
-          opacity: 0;
-          transition: all 0.3s ease;
+      &::before {
+        display: block;
+        content: "•";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-60%);
+        font-size: 40px;
+        opacity: 0;
+        transition: all 0.3s ease;
       }
 
       &.active {
@@ -153,7 +153,7 @@ header {
         pointer-events: none;
 
         &::before {
-         opacity: 1;
+          opacity: 1;
         }
       }
     }
@@ -217,7 +217,6 @@ header {
             transform: none;
           }
         }
-
 
         &:hover {
           transform: translateY(-3px);
