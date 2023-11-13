@@ -1,40 +1,28 @@
 <template>
   <section class="employees">
     <h3 class="title">Specjaliści</h3>
-    <div class="wrapper">
-      <router-link to="/o-nas">
-        <div class="img-hold">
-          <img
-            src="../../../assets/images/persons/home-employee-1.jpg"
-            alt="Pracownik 1" />
-          <h3 class="sub-title">mgr Martyna Cieślicka</h3>
-          <base-button type="primary">Zobacz więcej</base-button>
-        </div>
-      </router-link>
-      <router-link to="/o-nas">
-        <div class="img-hold">
-          <img
-            src="../../../assets/images/persons/home-employee-1.jpg"
-            alt="Pracownik 1" />
-          <h3 class="sub-title">Lorem Ipsum</h3>
-          <base-button type="primary">Zobacz więcej</base-button>
-        </div>
-      </router-link>
-      <router-link to="/o-nas">
-        <div class="img-hold">
-          <img
-            src="../../../assets/images/persons/home-employee-1.jpg"
-            alt="Pracownik 1" />
-          <h3 class="sub-title">Lorem Ipsum</h3>
-          <base-button type="primary">Zobacz więcej</base-button>
-        </div>
-      </router-link>
-    </div>
+    <employees-mobile v-if="isMobile"></employees-mobile>
+    <employees-desktop v-else></employees-desktop>
   </section>
 </template>
 
 <script>
+import EmployeesMobile from "./EmployeesMobile.vue";
+import EmployeesDesktop from "./EmployeesDesktop.vue";
+
+export default {
+  components: {
+    EmployeesMobile,
+    EmployeesDesktop,
+  },
+  computed: {
+    isMobile() {
+      return this.$store.getters.isMobile;
+    },
+  },
+};
 </script>
+
 
 <style lang="scss" scoped>
 .employees {
@@ -42,56 +30,11 @@
   background-color: #e4d4c7;
   padding: 60px 0;
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 60px;
-  }
-
-  button {
-    width: 100%;
-  }
-
   .title {
     width: max-content;
     margin-inline: auto;
     text-align: center;
     margin-bottom: 60px;
-  }
-
-  .img-hold {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
-    padding: 0 20px 20px;
-    background-color: rgba($color: white, $alpha: 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
-
-    img {
-      object-fit: cover;
-      object-position: 0% 50%;
-      width: 70vw;
-      max-width: 300px;
-      max-height: 300px;
-      opacity: 0.8;
-    }
-
-    .sub-title {
-      width: 100%;
-      padding-block: 12px;
-      color: black;
-      font-size: 1.4rem;
-      letter-spacing: 1px;
-      text-align: center;
-      font-weight: 400;
-    }
   }
 }
 

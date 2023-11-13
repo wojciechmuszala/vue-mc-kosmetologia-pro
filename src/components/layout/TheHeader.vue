@@ -1,7 +1,7 @@
 <template>
   <header class="container">
     <nav class="nav">
-      <router-link class="logo" to="/strona-glowna">
+      <router-link class="logo" to="/">
         <img
           src="../../assets/images/mini-logo.png"
           alt="Logo MC Kosmetologia profesjonalna" />

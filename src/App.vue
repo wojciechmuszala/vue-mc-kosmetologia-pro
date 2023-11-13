@@ -20,6 +20,18 @@ export default {
     TheHeader,
     TheFooter,
   },
+  methods: {
+    handleScreenResize() {
+      this.$store.dispatch("checkIsMobile");
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.handleScreenResize);
+    this.handleScreenResize();
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.handleScreenResize);
+  },
 };
 </script>
 

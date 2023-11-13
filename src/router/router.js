@@ -9,8 +9,7 @@ import SignUpPage from "../pages/SignUpPage.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", redirect: "/strona-glowna" },
-    { path: "/strona-glowna", component: HomePage },
+    { path: "/", component: HomePage },
     { path: "/o-nas", component: AboutPage },
     { path: "/oferta", component: OfferPage },
     { path: "/cennik", component: PriceListPage },

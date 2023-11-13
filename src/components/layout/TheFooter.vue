@@ -1,16 +1,25 @@
 <template>
-  <footer class="container">
-    <a href="/">
-      <h2 class="company-name">
-        <span class="big"> Kosmetologia profesjonalna</span>
-        <span class="small">Martyna Cieślicka</span>
-      </h2>
-    </a>
-    <ul class="social-media">
-      <li class="img-hold">
-        <img src="" alt="" />
-      </li>
-    </ul>
+  <footer>
+    <section class="footer">
+      <div class="container">
+        <a href="/">
+          <h2 class="company-name">
+            <span class="big"> Kosmetologia profesjonalna</span>
+            <span class="small">Martyna Cieślicka</span>
+          </h2>
+        </a>
+        <ul class="social-media">
+          <li class="img-hold">
+            <img src="" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="sub-footer">
+      <div class="container">
+        &copy; <span id="mojciech-dev">mojciech.dev</span>. All rights reserved.
+      </div>
+    </section>
   </footer>
 </template>
 
@@ -18,13 +27,18 @@
 
 <style lang="scss" scoped>
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  margin-top: 100px;
+  color: white;
+}
+.footer {
   background-color: #555;
   padding: 60px;
-  margin-top: 100px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   a {
     text-decoration: none;
@@ -58,18 +72,36 @@ footer {
   }
 }
 
+.sub-footer {
+  padding: 20px 60px;
+  background-color: #444;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  color: #b4b4b4;
+
+  #mojciech-dev {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 1px;
+  }
+}
+
 @media screen and (min-width: 767px) {
-  footer {
-    justify-content: space-between;
-    flex-direction: row;
+  .footer {
+    .wrapper {
+      justify-content: space-between;
+      flex-direction: row;
+    }
 
     .social-media {
-
       .img-hold {
         img {
         }
       }
     }
+  }
+
+  .sub-footer {
   }
 }
 </style>
