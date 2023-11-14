@@ -2,6 +2,7 @@
 node_modules
 /dist
 /src/assets/images/persons
+/src/assets/images/social-media
 
 
 # local env files
