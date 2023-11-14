@@ -104,14 +104,19 @@ footer {
   .social-media {
     display: flex;
     gap: 15px;
+    width: max-content;
 
-    a {
-      padding: 5px;
-      display: block;
-      transition: all 0.3s ease;
+    li {
+      width: 38px;
+      a {
+        padding: 5px;
+        display: block;
+        width: 100%;
+        transition: all 0.3s ease;
 
-      &:hover {
-        transform: scale(1.2);
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
 
