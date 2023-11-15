@@ -22,24 +22,34 @@ export default {
   display: flex;
   flex-direction: column;
   margin-block: 60px;
-  background-color: #dbc7ba;
+  /* background-color: #dbc7ba; */
+  border: 2px solid $color-nude;
   padding: 20px;
-  
-  .wrapper {
-    padding: 0 20px 20px;
-    background-color: rgba($color: white, $alpha: 0.3);
-    
-  }
 
   .img-hold {
     overflow: hidden;
     height: 300px;
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid $color-nude;
 
     &::v-deep img {
       object-fit: cover;
       object-position: 50% 45%;
       max-height: 100%;
+    }
+  }
+
+  .text-hold {
+    background-color: $color-nude;
+    padding: 20px;
+
+    &::v-deep h2 {
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: 3px;
+      margin-bottom: 10px
+
     }
   }
 }

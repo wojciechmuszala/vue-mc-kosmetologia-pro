@@ -3,8 +3,8 @@ import App from "./App.vue";
 import store from "./store/index.js";
 import router from "./router/router.js";
 
-import "./assets/styles/variables.scss";
-import "./assets/styles/global.scss";
+// import "./assets/styles/variables.scss";
+// import "./assets/styles/styles.scss";
 
 import BaseButton from "./components/base/BaseButton.vue";
 

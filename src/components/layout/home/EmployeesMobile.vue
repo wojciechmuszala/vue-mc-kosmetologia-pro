@@ -56,18 +56,6 @@ export default {
       return this.$store.getters.isMobile;
     },
   },
-  setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-    };
-  },
 };
 </script>
 
@@ -108,7 +96,6 @@ export default {
     .sub-title {
       width: 100%;
       padding-block: 12px;
-      color: black;
       font-size: 1.4rem;
       letter-spacing: 1px;
       text-align: center;

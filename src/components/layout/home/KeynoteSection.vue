@@ -16,10 +16,44 @@
 
 <style lang="scss" scoped>
 
+  /* .keynote {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+  
+    .text-hold {
+      justify-content: center;
+      padding: 60px 10px 0 10px;
+  
+  
+      .title {
+        width: max-content;
+        margin: 0 auto 20px;
+      }
+      p {
+        line-height: 24px;
+        font-size: 1.6rem;
+      }
+    }
+  
+    .img-hold {
+      overflow: hidden;
+      padding-top: 60px;
+      height: 300px;
+  
+      img {
+        object-fit: cover;
+        object-position: 0% 50%;
+        max-height: 100%;
+        opacity: 0.8;
+      }
+    }
+  } */
   .keynote {
     display: flex;
     flex-direction: column;
     padding-bottom: 60px;
+    position: relative;
   
     .text-hold {
       justify-content: center;

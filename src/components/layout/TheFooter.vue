@@ -136,8 +136,10 @@ footer {
   letter-spacing: 2px;
   font-size: 1rem;
   color: #b4b4b4;
-
-  margin-left: auto;
+  .wrapper {
+      width: max-content;
+      margin: auto;
+    }
 
   #mojciech-dev {
     font-family: "Roboto Mono", monospace;
@@ -165,10 +167,7 @@ footer {
   }
 
   .sub-footer {
-    .wrapper {
-      width: max-content;
-      margin: auto;
-    }
+    
   }
 }
 </style>

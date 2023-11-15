@@ -29,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
-  background-color: #e0cec1;
+  background-color: $color-nude;
   font-size: 1.6rem;
   column-gap: 60px;
   .logo {
@@ -41,7 +41,9 @@
   }
   .text {
     p {
+      font-size: 1.6rem;
       margin-bottom: 30px;
+      font-weight: 200;
     }
   }
 }
@@ -53,6 +55,7 @@
     column-gap: 40px;
     padding: 40px;
     .logo {
+      margin-bottom: 0;
       .img-hold {
         width: 30vw;
         max-width: 300px;
@@ -60,6 +63,7 @@
     }
     .text {
       p {
+        font-size: 2.4rem;
       }
     }
   }

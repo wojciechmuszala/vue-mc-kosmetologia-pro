@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: rgba($color: white, $alpha: 0.9);
-  z-index: 1;
+  z-index: 10;
   position: sticky;
   top: 0;
 }
@@ -95,7 +95,7 @@ header {
   span {
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: $color-black;
   }
 }
 
@@ -203,7 +203,7 @@ header {
           top: unset;
           transform: translateY(5px);
           left: 0;
-          background-color: black;
+          background-color: $color-black;
           opacity: 1;
         }
         &.active {

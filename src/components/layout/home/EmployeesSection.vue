@@ -23,11 +23,11 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 .employees {
   padding: 60px 0;
-  background-color: #e4d4c7;
+  /* background-color: #e4d4c7; */
+  background-color: $color-nude;
   padding: 60px 0;
 
   .title {
@@ -35,63 +35,20 @@ export default {
     margin-inline: auto;
     text-align: center;
     margin-bottom: 60px;
+    font-size: clamp(2.4rem, 7vw, 4.8rem);
+    font-weight: 200;
   }
 }
 
 @media screen and (min-width: 767px) {
   .employees {
-    .wrapper {
-      flex-direction: row;
-    }
-
-    button {
-      display: none;
-    }
-
-    .img-hold {
-      display: block;
-      overflow: hidden;
-      height: 300px;
-      width: 300px;
-      padding: 0;
-      cursor: pointer;
-
-      .sub-title {
-        transition: all 0.3s ease;
-        opacity: 0;
-        position: absolute;
-        top: 85%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        padding-block: 12px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.2);
-        text-align: center;
-      }
-
-      &:hover {
-        letter-spacing: 3.5px;
-        box-shadow: 0px 0px 15px -4px rgba(66, 68, 90, 0.5);
-        transform: scale(1.04);
-
-        .sub-title {
-          opacity: 1;
-        }
-      }
-
-      &:active {
-        box-shadow: 0px 0px 15px -4px rgba(66, 68, 90, 1);
-      }
-
-      img {
-        object-fit: cover;
-        object-position: 0% 50%;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        opacity: 0.8;
-      }
+    .title {
+      width: max-content;
+      margin-inline: auto 60px;
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 5.8rem;
+      font-weight: 100;
     }
   }
 }
