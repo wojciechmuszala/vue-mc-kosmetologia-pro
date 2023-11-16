@@ -21,7 +21,7 @@
     </employee-section>
     <employee-section id="second-employee" type="img-left">
       <template #text>
-        <h2>Ipsum Lorem</h2>
+        <h2>Julia Bugała</h2>
         <h3>Studentka kosmetologii</h3>
         <h4>Manicure</h4>
         <article>
@@ -39,7 +39,7 @@
     </employee-section>
     <employee-section id="third-employee" type="img-right">
       <template #text>
-        <h2>Lorem ipsum</h2>
+        <h2>Sandra Mikołajczyk</h2>
         <h3>Stylistka brwi i rzęs</h3>
         <h4>Fanka naturalnych stylizacji</h4>
         <article>

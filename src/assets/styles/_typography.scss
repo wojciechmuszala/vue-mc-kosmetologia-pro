@@ -1,4 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,400;1,600&family=Roboto+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,400;1,600&family=Roboto+Mono:wght@300&display=swap");
+
+// @font-face {
+//   font-family: 'Beautifully Delicious Script';
+//   src: url('~@/assets/fonts/beautifully-delicious-script/BDSans-Thin');
+//   font-weight: normal;
+//   font-style: thin;
+// }
+
+// @font-face {
+//   font-family: 'Beautifully Delicious Sans';
+//   src: url('~@/assets/fonts/beautifully-delicious-script/BDSans-Thin');
+//   font-weight: normal;
+//   font-style: thin;
+// }
+
+@font-face {
+  font-family: "Beautifully Delicious Script";
+  src: url("~@/assets/fonts/beautifully-delicious-script/BDScript-Regular.otf");
+  font-weight: normal;
+  font-style: regular;
+}
 
 html {
   font-family: "Montserrat", sans-serif;
